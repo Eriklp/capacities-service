@@ -31,8 +31,12 @@ public class CapacityController {
     }
 
     @GetMapping
-    public Flux<Capacity> listCapacities() {
-        return capacityService.listCapacities();
+    public Flux<Capacity> listCapacities(
+            @RequestParam(defaultValue = "0") int page,
+            @RequestParam(defaultValue = "10") int size,
+            @RequestParam(defaultValue = "name") String sortField,
+            @RequestParam(defaultValue = "asc") String sortOrder) {
+        return capacityService.listCapacities(page, size, sortField, sortOrder);
     }
 
     @DeleteMapping("/{id}")
