@@ -1,5 +1,6 @@
 package com.example.capacities.infrastructure;
 
+import com.example.capacities.application.CapacityDTO;
 import com.example.capacities.application.CapacityService;
 import com.example.capacities.domain.model.Capacity;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -31,7 +32,7 @@ public class CapacityController {
     }
 
     @GetMapping
-    public Flux<Capacity> listCapacities(
+    public Flux<CapacityDTO> listCapacities(
             @RequestParam(defaultValue = "0") int page,
             @RequestParam(defaultValue = "10") int size,
             @RequestParam(defaultValue = "name") String sortField,

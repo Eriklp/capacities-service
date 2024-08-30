@@ -3,6 +3,8 @@ package com.example.capacities.domain.model;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Size;
+
+import java.util.HashSet;
 import java.util.Set;
 
 @Entity
@@ -24,7 +26,7 @@ public class Capacity {
     @ElementCollection
     @CollectionTable(name = "capacity_technologies", joinColumns = @JoinColumn(name = "capacity_id"))
     @Column(name = "technology_name")
-    private Set<String> technologyNames; // Almacena nombres de tecnología para evitar duplicados
+    private Set<String> technologyNames = new HashSet<>(); // Almacena nombres de tecnología para evitar duplicados
 
     public Capacity() {
     }
