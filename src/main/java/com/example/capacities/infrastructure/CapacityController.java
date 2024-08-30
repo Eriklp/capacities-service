@@ -10,7 +10,7 @@ import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
 @RestController
-@RequestMapping("/api/capacities")
+@RequestMapping("/")
 public class CapacityController {
 
     private final CapacityService capacityService;

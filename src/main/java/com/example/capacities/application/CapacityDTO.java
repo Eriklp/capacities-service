@@ -45,7 +45,11 @@ public class CapacityDTO {
         this.description = description;
     }
 
-    public void setCapacities(Set<String> technologyNames) {
+    public void setTechnologyNames(Set<String> technologyNames) {
         this.technologyNames = technologyNames;
+    }
+
+    public Set<String> getTechnologyNames() {
+        return technologyNames;
     }
 }
