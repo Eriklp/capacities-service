@@ -23,6 +23,7 @@ public class Capacity {
     @Size(max = 250, message = "El tamaño máximo de la descripción es 250 caracteres")
     private String description;
 
+    @NotBlank(message = "Debe proporcionar una lista de tecnologias")
     @ElementCollection
     @CollectionTable(name = "capacity_technologies", joinColumns = @JoinColumn(name = "capacity_id"))
     @Column(name = "technology_name")

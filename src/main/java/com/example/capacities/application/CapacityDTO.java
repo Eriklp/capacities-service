@@ -29,10 +29,6 @@ public class CapacityDTO {
         return description;
     }
 
-    public Set<String> getTechnologies() {
-        return technologyNames;
-    }
-
     public void setId(Long id) {
         this.id = id;
     }
